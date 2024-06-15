@@ -1,0 +1,83 @@
+:root {
+    --main-bg-black: #0E100F;
+    --main-color-white: #FFFCE1;
+    --color-surface50: #7c7c6f;
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(45deg,
+            rgb(var(--accent)),
+            rgb(var(--accent-light)) 30%,
+            white 60%);
+}
+
+html {
+    font-family: system-ui, sans-serif;
+    background: var(--main-bg-black);
+    color: var(--main-color-white);
+}
+
+body {
+    font-family: 'Manrope Variable', sans-serif;
+    font-weight: 400;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    border-bottom: .0625rem solid #42433d;
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        .nav-links {
+            margin: auto;
+            display: flex;
+            list-style-type: none;
+            gap: 2rem;
+            color: var(--color-surface50);
+
+            a:hover {
+                color: var(--main-color-white);
+                transition: color 0.2s ease-in-out;
+            }
+        }
+    }
+}
+
+.button {
+    border: none;
+    outline: none;
+    display: inline-block;
+    width: 150px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 35px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    background-color: #FF8709;
+    color: white;
+    border-radius: 50px;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.label-up {
+    display: block;
+    margin: 0px 30px;
+    height: 100%;
+    position: relative;
+    top: 0%;
+    transition: 0.3s;
+}
+
+.button:hover .label-up {
+    top: -100%;
+}
