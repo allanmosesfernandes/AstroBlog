@@ -1,5 +1,7 @@
 :root {
     --main-bg-black: #0E100F;
+    --main-bg-green: #156669;
+    --main-bg-cream: #EEECDE;
     --main-color-white: #FFFCE1;
     --color-surface50: #7c7c6f;
     --accent: 136, 58, 234;
@@ -10,16 +12,25 @@
             rgb(var(--accent-light)) 30%,
             white 60%);
 }
-
 html {
     font-family: system-ui, sans-serif;
-    background: var(--main-bg-black);
-    color: var(--main-color-white);
+    background: var(--main-bg-green);
+    color: var(--main-bg-cream);
+}
+@font-face {
+    font-family: 'RocaRegular';
+    src: url('/fonts/roca-one-regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 body {
-    font-family: 'Manrope Variable', sans-serif;
+    font-family: 'Fira Code Variable', monospace;
     font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--main-bg-cream);
 }
 
 a {
@@ -27,9 +38,15 @@ a {
     text-decoration: none;
 }
 
-header {
-    border-bottom: .0625rem solid #42433d;
+nav {
+    color: var(--main-bg-cream);
+    font-family: 'RocaRegular';
+}
 
+header {
+    border-bottom: 0.5px solid var(--main-bg-cream);
+    color: var(--main-bg-cream);
+    padding-bottom: 1rem;
     nav {
         display: flex;
         align-items: center;
@@ -39,8 +56,8 @@ header {
             display: flex;
             list-style-type: none;
             gap: 2rem;
-            color: var(--color-surface50);
-
+            color: var(--main-bg-cream);
+            font-size: 1.25rem;
             a:hover {
                 color: var(--main-color-white);
                 transition: color 0.2s ease-in-out;
@@ -80,4 +97,35 @@ header {
 
 .button:hover .label-up {
     top: -100%;
+}
+
+.logo {
+    font-size: 1.75rem;
+}
+
+
+/* First Fold */
+.firstfold__wrapper {
+    padding: 1rem 0;
+    h2,p {
+        margin: 0;
+    }
+
+    .firstfold__left {
+        width: 60%;
+    }
+    a {
+        border-bottom: 1px dashed var(--main-bg-cream);
+        position: relative;
+
+        &:hover {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .4s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23EEECDE' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+            background-position: 0 100%;
+            background-size: auto 6px;
+            background-repeat: repeat-x;
+            text-decoration: none;
+            border-bottom: none;
+            color: var(--text-color) !important;
+        }
+    }
 }
