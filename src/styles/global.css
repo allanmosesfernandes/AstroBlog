@@ -106,13 +106,26 @@ header {
 
 /* First Fold */
 .firstfold__wrapper {
-    padding: 1rem 0;
+    padding: 3rem 0 1rem 0;
+    display: flex;
+    gap: 1rem;
+    color: var(--main-bg-cream);
     h2,p {
         margin: 0;
     }
 
     .firstfold__left {
         width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+    .firstfold__right {
+        display: flex;
+        width: 40%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
     }
     a {
         border-bottom: 1px dashed var(--main-bg-cream);
@@ -128,4 +141,37 @@ header {
             color: var(--text-color) !important;
         }
     }
+
+
+    .window {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background-image: radial-gradient(45% 45% at 45% 45%, rgb(0, 198, 71) 50%, rgba(0, 0, 0, 0) 51%), radial-gradient(45% 45% at 75% 75%, rgb(3, 69, 36) 50%, rgba(0, 0, 0, 0) 51%);
+    background-size: 20px 20px;
+    border-radius: 0px;
+    background-position: 0px center;
+    animation: 30s linear 0s infinite normal none running iAnRbO;
+    }
+    .nerd {
+        max-width: 300px;
+        margin: auto;
+    }
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(53, 10px);
+    grid-template-rows: repeat(7, 10px);
+    gap: 3px;
+}
+.grid-item {
+    width: 10px;
+    height: 10px;
+    background-color: #2d333b; /* default color */
+}
+.grid-item.level-1 { background-color: #0e4429; }
+.grid-item.level-2 { background-color: #006d32; }
+.grid-item.level-3 { background-color: #26a641; }
+.grid-item.level-4 { background-color: #39d353; }
