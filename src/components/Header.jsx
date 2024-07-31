@@ -1,6 +1,6 @@
 import brandLogo from "../assets/images/logo.svg"
 
-export const Header = () => {
+const Header = () => {
 	return (
 		<header>
 			<nav>
@@ -15,3 +15,5 @@ export const Header = () => {
 		</header>
 	);
 };
+
+export default Header;
